@@ -1,0 +1,368 @@
+@charset "utf-8";
+@mixin bgIcon{
+    background:url("../img/icon.png") no-repeat; 
+    background-size:104px 326px;
+}
+@mixin navIcon{
+    background:url("../img/nav.png") no-repeat; 
+    background-size:20px auto;
+}
+$bgcolor : #F2F2F2;
+$bdcolor : #eee;
+
+*{margin:0;padding:0;}
+ul{list-style:none}
+img{display:block;border:none;}
+a{display:block;text-decoration:none;color:#000}
+
+body{
+    overflow-x:hidden;
+    min-width: 320px;
+    max-width: 540px;
+    margin: 0 auto;
+    background: $bgcolor;
+    font-size:14px;
+    color:#000;
+}
+
+//头部
+#header .search{
+    position:relative;
+    display:flex;
+    height:45px;
+    background:#F6F6F6;
+    .input{
+        position:relative;
+        width:100%;
+        height:100%;
+        padding:10px 55px 10px 10px;
+        box-sizing: border-box;
+        input{
+            display:block;
+            height:100%;
+            width:100%;
+            padding-left:26px;
+            box-shadow:3px 3px 10px #999;
+            outline:none;
+            border:1px solid #ccc;
+            box-sizing: border-box;
+            border-radius:5px;   
+        }
+        &::after{
+            content:"";
+            position:absolute;
+            left:17px;
+            top: 13px;
+            width: 15px;
+            height: 15px;
+            @include bgIcon;
+            background-position: -59px -276px;
+        }
+    }
+    .my{
+        position:absolute;
+        right:0;
+        top:0;
+        width:45px;
+        height:45px;
+        text-align:center;
+        color:#099FDE;
+        i{
+            display:block;
+            width: 23px;
+            height: 23px;
+            margin:3px auto 0;
+            @include bgIcon;
+            background-position:-59px -193px;
+        }
+    }
+}
+
+//轮播
+#header .banner{
+    overflow: hidden;
+    position:relative;
+    width: 100%;
+    ul{
+        overflow: hidden;
+        width: 1000%;
+        margin-left:-100%;
+        li{
+            float:left;
+            width: 10%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .tran{
+        transition:margin-left .3s
+    }
+    //切换按钮
+    .tab{
+        position:absolute;
+        right:10px;
+        bottom:10px;
+        span{
+            float:left;
+            display:block;
+            width: 6px;
+            height: 6px;
+            margin:0 3px;
+            background:rgba(255,255,255,.6);
+            border-radius:3px;
+        }
+        .on{
+            width:18px;
+            background:#fff;
+        }
+    }
+}
+
+//导航
+#main .nav{
+    padding:3px;
+    box-sizing:border-box;
+    li{
+        overflow: hidden;
+        margin-bottom:5px;
+        border-radius:3px;
+        div{
+            float:left;
+            width: 33.3%;
+            height:45px;
+            line-height:45px;
+            box-sizing:border-box;
+            a{
+                width: 100%;
+                height: 100%;
+                text-align:center;
+                color:#fff;
+                i{
+                    display:block;
+                    width:43px;
+                    height: 43px;
+                    margin: 0 auto;
+                    @include bgIcon;
+                }
+                //背景图定位
+                .icon1{
+                    background-position: 0 -124px;
+                }
+                .icon2{
+                    background-position: 0 -284px;
+                }
+                .icon3{
+                    background-position: 0 -180px;
+                }
+            }
+        }
+        //标志图标
+        .icon{
+            height:90px;
+            line-height:40px;
+        }
+        .border-r{
+            border-right:1px solid $bgcolor
+        }
+        .border-b{
+            border-bottom:1px solid $bgcolor
+        }
+        &:nth-child(1){
+            background-color:#FF697A
+        }
+        &:nth-child(2){
+            background-color:#3D98FF
+        }
+        &:nth-child(3){
+            background-color:#44C522
+        }
+        &:nth-child(4){
+            margin-bottom:0;
+            background-color:#FC9720;
+        }
+    }
+}
+
+//子导航
+#main .subNav{
+    overflow:hidden;
+    padding:3px;
+    margin:5px 0;
+    border-radius:20px;
+    a{
+        float:left;
+        width: 25%;
+        height: 60px;
+        text-align:center;
+        font-size:12px;
+        border-right:1px solid $bgcolor;
+        border-bottom:1px solid $bgcolor;
+        box-sizing:border-box;
+        background:#fff;
+        i{
+            display:block;
+            width: 20px;
+            height: 20px;
+            margin: 10px auto 0;
+            @include navIcon;
+        }
+        &:nth-child(1){
+            i{
+                background-position: 0 -80px;
+            }
+        }
+        &:nth-child(2){
+            i{
+                background-position: 0 -100px
+            }
+        }
+        &:nth-child(3){
+            i{
+                background-position: 0 -120px
+            }
+        }
+        &:nth-child(4){
+            i{
+                background-position: 0 -140px
+            }
+        }
+        &:nth-child(5){
+            i{
+                background-position: 0 -160px
+            }
+        }
+        &:nth-child(6){
+            i{
+                background-position: 0 -180px
+            }
+        }
+        &:nth-child(7){
+            i{
+                background-position: 0 -200px
+            }
+        }
+        &:nth-child(8){
+            i{
+                background-position: 0 -220px
+            }
+        }
+        &:nth-child(9){
+            i{
+                background-position: 0px 0px
+            }
+        }
+        &:nth-child(10){
+            i{
+                background-position: 0px -20px
+            }
+        }
+        &:nth-child(11){
+            i{
+                background-position: 0px -40px
+            }
+        }
+        &:nth-child(12){
+            i{
+                background-position: 0 -60px;
+            }
+        }
+    }
+}
+
+//热门活动
+#main .hot{
+    background:#fff;
+    border-top:1px solid $bdcolor;
+    h2{
+        height: 45px;
+        line-height:45px;
+        border-bottom:1px solid $bdcolor;
+        i{
+            float:left;
+            display:block;
+            width: 79px;
+            height: 15px;
+            margin:15px;
+            background:url("../img/text.png") no-repeat;
+            background-size: 79px auto;
+            background-position: 0 -19px;
+        }
+        span{
+            float:right;
+            display:block;
+            width: 100px;
+            height: 20px;
+            margin:12px;
+            text-align:center;
+            line-height:20px;
+            font-size:12px;
+            color:#fff;
+            font-weight:normal;
+            border-radius:10px;
+            background:linear-gradient(to right,#FF4F65,#FF6CC7)
+        }
+    }
+    .con{
+        overflow:hidden;
+        width: 100%;
+        li{
+            float:left;
+            width: 50%;
+            border-right:1px solid $bdcolor;
+            border-bottom:1px solid $bdcolor;
+            box-sizing:border-box;
+            a{
+                width: 100%;
+            }
+            img{
+                width: 100%;
+            }
+            &:nth-child(4){
+                border-bottom:0
+            }
+            &:nth-child(5){
+                border-bottom:0
+            }
+        }
+    }
+}
+
+//底部
+#footer{
+    height: 50px;
+    margin-top:10px;
+    background:#fff;
+    border-top:1px solid $bdcolor;
+    div{
+        float:left;
+        width: 33.3%;
+        text-align:center;
+        font-size:12px;
+        i{
+            display: block;
+            width: 17px;
+            height: 17px;
+            margin:5px auto;
+            @include bgIcon;
+        }
+        &:nth-child(1){
+            i{
+                background-position: -60px -153px
+            }
+        }
+        &:nth-child(2){
+            i{
+                background-position: -60px -173px
+            }
+        }
+        &:nth-child(3){
+            i{
+                background-position: -60px -308px
+            }
+        }
+        span{
+            // display:block;
+        }
+    }
+}

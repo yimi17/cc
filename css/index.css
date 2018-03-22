@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  border: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+  max-width: 540px;
+  margin: 0 auto;
+  background: #F2F2F2;
+  font-size: 14px;
+  color: #000;
+}
+
+#header .search {
+  position: relative;
+  display: flex;
+  height: 45px;
+  background: #F6F6F6;
+}
+
+#header .search .input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px 55px 10px 10px;
+  box-sizing: border-box;
+}
+
+#header .search .input input {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding-left: 26px;
+  box-shadow: 3px 3px 10px #999;
+  outline: none;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#header .search .input::after {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 13px;
+  width: 15px;
+  height: 15px;
+  background: url("../img/icon.png") no-repeat;
+  background-size: 104px 326px;
+  background-position: -59px -276px;
+}
+
+#header .search .my {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  color: #099FDE;
+}
+
+#header .search .my i {
+  display: block;
+  width: 23px;
+  height: 23px;
+  margin: 3px auto 0;
+  background: url("../img/icon.png") no-repeat;
+  background-size: 104px 326px;
+  background-position: -59px -193px;
+}
+
+#header .banner {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+#header .banner ul {
+  overflow: hidden;
+  width: 1000%;
+  margin-left: -100%;
+}
+
+#header .banner ul li {
+  float: left;
+  width: 10%;
+}
+
+#header .banner ul li img {
+  width: 100%;
+}
+
+#header .banner .tran {
+  transition: margin-left .3s;
+}
+
+#header .banner .tab {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+#header .banner .tab span {
+  float: left;
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: 0 3px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+}
+
+#header .banner .tab .on {
+  width: 18px;
+  background: #fff;
+}
+
+#main .nav {
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+#main .nav li {
+  overflow: hidden;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+#main .nav li div {
+  float: left;
+  width: 33.3%;
+  height: 45px;
+  line-height: 45px;
+  box-sizing: border-box;
+}
+
+#main .nav li div a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+#main .nav li div a i {
+  display: block;
+  width: 43px;
+  height: 43px;
+  margin: 0 auto;
+  background: url("../img/icon.png") no-repeat;
+  background-size: 104px 326px;
+}
+
+#main .nav li div a .icon1 {
+  background-position: 0 -124px;
+}
+
+#main .nav li div a .icon2 {
+  background-position: 0 -284px;
+}
+
+#main .nav li div a .icon3 {
+  background-position: 0 -180px;
+}
+
+#main .nav li .icon {
+  height: 90px;
+  line-height: 40px;
+}
+
+#main .nav li .border-r {
+  border-right: 1px solid #F2F2F2;
+}
+
+#main .nav li .border-b {
+  border-bottom: 1px solid #F2F2F2;
+}
+
+#main .nav li:nth-child(1) {
+  background-color: #FF697A;
+}
+
+#main .nav li:nth-child(2) {
+  background-color: #3D98FF;
+}
+
+#main .nav li:nth-child(3) {
+  background-color: #44C522;
+}
+
+#main .nav li:nth-child(4) {
+  margin-bottom: 0;
+  background-color: #FC9720;
+}
+
+#main .subNav {
+  overflow: hidden;
+  padding: 3px;
+  margin: 5px 0;
+  border-radius: 20px;
+}
+
+#main .subNav a {
+  float: left;
+  width: 25%;
+  height: 60px;
+  text-align: center;
+  font-size: 12px;
+  border-right: 1px solid #F2F2F2;
+  border-bottom: 1px solid #F2F2F2;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+#main .subNav a i {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 10px auto 0;
+  background: url("../img/nav.png") no-repeat;
+  background-size: 20px auto;
+}
+
+#main .subNav a:nth-child(1) i {
+  background-position: 0 -80px;
+}
+
+#main .subNav a:nth-child(2) i {
+  background-position: 0 -100px;
+}
+
+#main .subNav a:nth-child(3) i {
+  background-position: 0 -120px;
+}
+
+#main .subNav a:nth-child(4) i {
+  background-position: 0 -140px;
+}
+
+#main .subNav a:nth-child(5) i {
+  background-position: 0 -160px;
+}
+
+#main .subNav a:nth-child(6) i {
+  background-position: 0 -180px;
+}
+
+#main .subNav a:nth-child(7) i {
+  background-position: 0 -200px;
+}
+
+#main .subNav a:nth-child(8) i {
+  background-position: 0 -220px;
+}
+
+#main .subNav a:nth-child(9) i {
+  background-position: 0px 0px;
+}
+
+#main .subNav a:nth-child(10) i {
+  background-position: 0px -20px;
+}
+
+#main .subNav a:nth-child(11) i {
+  background-position: 0px -40px;
+}
+
+#main .subNav a:nth-child(12) i {
+  background-position: 0 -60px;
+}
+
+#main .hot {
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+#main .hot h2 {
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #eee;
+}
+
+#main .hot h2 i {
+  float: left;
+  display: block;
+  width: 79px;
+  height: 15px;
+  margin: 15px;
+  background: url("../img/text.png") no-repeat;
+  background-size: 79px auto;
+  background-position: 0 -19px;
+}
+
+#main .hot h2 span {
+  float: right;
+  display: block;
+  width: 100px;
+  height: 20px;
+  margin: 12px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: normal;
+  border-radius: 10px;
+  background: linear-gradient(to right, #FF4F65, #FF6CC7);
+}
+
+#main .hot .con {
+  overflow: hidden;
+  width: 100%;
+}
+
+#main .hot .con li {
+  float: left;
+  width: 50%;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+#main .hot .con li a {
+  width: 100%;
+}
+
+#main .hot .con li img {
+  width: 100%;
+}
+
+#main .hot .con li:nth-child(4) {
+  border-bottom: 0;
+}
+
+#main .hot .con li:nth-child(5) {
+  border-bottom: 0;
+}
+
+#footer {
+  height: 50px;
+  margin-top: 10px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+#footer div {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  font-size: 12px;
+}
+
+#footer div i {
+  display: block;
+  width: 17px;
+  height: 17px;
+  margin: 5px auto;
+  background: url("../img/icon.png") no-repeat;
+  background-size: 104px 326px;
+}
+
+#footer div:nth-child(1) i {
+  background-position: -60px -153px;
+}
+
+#footer div:nth-child(2) i {
+  background-position: -60px -173px;
+}
+
+#footer div:nth-child(3) i {
+  background-position: -60px -308px;
+}
