@@ -286,6 +286,182 @@ body {
   background-position: 0 -60px;
 }
 
+#main .sale {
+  margin-bottom: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 0 10px 10px 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+#main .sale h2 {
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #eee;
+}
+
+#main .sale h2 i {
+  float: left;
+  display: block;
+  width: 79px;
+  height: 15px;
+  margin: 15px;
+  background: url("../img/text.png") no-repeat;
+  background-size: 79px auto;
+  background-position: 0 -19px;
+}
+
+#main .sale h2 span {
+  float: right;
+  display: block;
+  width: 100px;
+  height: 20px;
+  margin: 12px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: normal;
+  border-radius: 10px;
+  background: linear-gradient(to right, #FF4F65, #FF6CC7);
+}
+
+#main .sale h2 i {
+  background-position: 0 0;
+}
+
+#main .sale ul {
+  overflow: hidden;
+}
+
+#main .sale li {
+  float: left;
+  width: 50%;
+}
+
+#main .sale li a {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 110px;
+  background: #F9F9F9;
+  box-sizing: border-box;
+}
+
+#main .sale li a img {
+  width: 50px;
+  margin: 0 auto;
+}
+
+#main .sale li a p {
+  font-size: 12px;
+}
+
+#main .sale li .part1 {
+  width: 100%;
+  height: 200px;
+  border-right: 5px solid #fff;
+}
+
+#main .sale li .part1 .text-over {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  height: 40px;
+  margin: 5px 0;
+}
+
+#main .sale li .part1 img {
+  width: 100%;
+  max-height: 125px;
+  min-height: 125px;
+}
+
+#main .sale li .part1 p {
+  padding: 0 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#main .sale li .part1 p span:nth-child(1) {
+  color: #FF495E;
+}
+
+#main .sale li .part1 p span:nth-child(2) {
+  display: inline-block;
+  padding: 0 5px;
+  color: #fff;
+  font-size: 12px;
+  background: #FD3A51;
+  border-radius: 8px;
+}
+
+#main .sale li .part2 {
+  width: 100%;
+  height: 90px;
+  border-bottom: 5px solid #fff;
+}
+
+#main .sale li .part2 p {
+  margin-top: 5px;
+  text-indent: 10px;
+}
+
+#main .sale li .part2 p:nth-child(2) {
+  font-weight: bold;
+  color: #FD3A51;
+}
+
+#main .sale li .part2 img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 54px;
+}
+
+#main .sale li .part3 {
+  border-right: 5px solid #fff;
+}
+
+#main .sale li .part3 p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+#main .sale li .part3 p:nth-child(1) {
+  font-weight: bold;
+  color: #6AABFF;
+}
+
+#main .sale li .part3 p span {
+  color: #6AABFF;
+}
+
+#main .sale li .part3 img {
+  margin-top: 15px;
+}
+
+#main .sale li .part4 p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+#main .sale li .part4 p:nth-child(1) {
+  font-weight: bold;
+  color: #53CA72;
+}
+
+#main .sale li .part4 p span {
+  color: #53CA72;
+}
+
+#main .sale li .part4 img {
+  margin-top: 15px;
+}
+
 #main .hot {
   background: #fff;
   border-top: 1px solid #eee;
