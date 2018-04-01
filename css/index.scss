@@ -1,46 +1,51 @@
-@charset "utf-8";
-@mixin bgIcon{
+@mixin bgIcon{      //背景图标及缩放大小
     background:url("../img/icon.png") no-repeat; 
     background-size:104px 326px;
 }
-@mixin navIcon{
+@mixin navIcon{     //导航小图标及缩放大小
     background:url("../img/nav.png") no-repeat; 
     background-size:20px auto;
 }
-@mixin h2Title{
-    h2{
-        height: 45px;
-        line-height:45px;
-        border-bottom:1px solid $bdcolor;
+@mixin bg-position($index,$x,$y){   //背景定位
+    &:nth-child(#{$index}){
         i{
-            float:left;
-            display:block;
-            width: 79px;
-            height: 15px;
-            margin:15px;
-            background:url("../img/text.png") no-repeat;
-            background-size: 79px auto;
-            background-position: 0 -19px;
-        }
-        span{
-            float:right;
-            display:block;
-            width: 100px;
-            height: 20px;
-            margin:12px;
-            text-align:center;
-            line-height:20px;
-            font-size:12px;
-            color:#fff;
-            font-weight:normal;
-            border-radius:10px;
-            background:linear-gradient(to right,#FF4F65,#FF6CC7)
+            background-position: $x $y;
         }
     }
 }
+$bgcolor : #F2F2F2;     //背景颜色
+$bdcolor : #eee;        //边框颜色
 
-$bgcolor : #F2F2F2;
-$bdcolor : #eee;
+.h2{
+    /*h2标题样式*/
+    height: 45px;
+    line-height:45px;
+    border-bottom:1px solid $bdcolor;
+    i{
+        float:left;
+        display:block;
+        width: 79px;
+        height: 15px;
+        margin:15px;
+        background:url("../img/text.png") no-repeat;
+        background-size: 79px auto;
+        background-position: 0 -19px;
+    }
+    span{
+        float:right;
+        display:block;
+        width: 100px;
+        height: 20px;
+        margin:12px;
+        text-align:center;
+        line-height:20px;
+        font-size:12px;
+        color:#fff;
+        font-weight:normal;
+        border-radius:10px;
+        background:linear-gradient(to right,#FF4F65,#FF6CC7)
+    }
+}
 
 *{margin:0;padding:0;}
 ul{list-style:none}
@@ -57,7 +62,7 @@ body{
     color:#000;
 }
 
-//头部
+/*头部*/
 #header .search{
     position:relative;
     display:flex;
@@ -110,7 +115,7 @@ body{
     }
 }
 
-//轮播
+/*轮播*/
 #header .banner{
     overflow: hidden;
     position:relative;
@@ -130,8 +135,8 @@ body{
     .tran{
         transition:margin-left .3s
     }
-    //切换按钮
     .tab{
+        /*切换按钮*/
         position:absolute;
         right:10px;
         bottom:10px;
@@ -151,7 +156,7 @@ body{
     }
 }
 
-//导航
+/*导航*/
 #main .nav{
     padding:3px;
     box-sizing:border-box;
@@ -159,38 +164,8 @@ body{
         overflow: hidden;
         margin-bottom:5px;
         border-radius:3px;
-        div{
-            float:left;
-            width: 33.3%;
-            height:45px;
-            line-height:45px;
-            box-sizing:border-box;
-            a{
-                width: 100%;
-                height: 100%;
-                text-align:center;
-                color:#fff;
-                i{
-                    display:block;
-                    width:43px;
-                    height: 43px;
-                    margin: 0 auto;
-                    @include bgIcon;
-                }
-                //背景图定位
-                .icon1{
-                    background-position: 0 -124px;
-                }
-                .icon2{
-                    background-position: 0 -284px;
-                }
-                .icon3{
-                    background-position: 0 -180px;
-                }
-            }
-        }
-        //标志图标
         .icon{
+            /*标志图标*/
             height:90px;
             line-height:40px;
         }
@@ -213,10 +188,40 @@ body{
             margin-bottom:0;
             background-color:#FC9720;
         }
+        div{
+            float:left;
+            width: 33.3%;
+            height:45px;
+            line-height:45px;
+            box-sizing:border-box;
+            a{
+                width: 100%;
+                height: 100%;
+                text-align:center;
+                color:#fff;
+            }
+            i{
+                display:block;
+                width:43px;
+                height: 43px;
+                margin: 0 auto;
+                @include bgIcon;
+            }
+            .icon1{
+                /*背景图定位*/
+                background-position: 0 -124px;
+            }
+            .icon2{
+                background-position: 0 -284px;
+            }
+            .icon3{
+                background-position: 0 -180px;
+            }
+        }
     }
 }
 
-//子导航
+/*子导航*/
 #main .subNav{
     overflow:hidden;
     padding:3px;
@@ -239,70 +244,22 @@ body{
             margin: 10px auto 0;
             @include navIcon;
         }
-        &:nth-child(1){
-            i{
-                background-position: 0 -80px;
-            }
-        }
-        &:nth-child(2){
-            i{
-                background-position: 0 -100px
-            }
-        }
-        &:nth-child(3){
-            i{
-                background-position: 0 -120px
-            }
-        }
-        &:nth-child(4){
-            i{
-                background-position: 0 -140px
-            }
-        }
-        &:nth-child(5){
-            i{
-                background-position: 0 -160px
-            }
-        }
-        &:nth-child(6){
-            i{
-                background-position: 0 -180px
-            }
-        }
-        &:nth-child(7){
-            i{
-                background-position: 0 -200px
-            }
-        }
-        &:nth-child(8){
-            i{
-                background-position: 0 -220px
-            }
-        }
-        &:nth-child(9){
-            i{
-                background-position: 0px 0px
-            }
-        }
-        &:nth-child(10){
-            i{
-                background-position: 0px -20px
-            }
-        }
-        &:nth-child(11){
-            i{
-                background-position: 0px -40px
-            }
-        }
-        &:nth-child(12){
-            i{
-                background-position: 0 -60px;
-            }
-        }
+        @include bg-position(1,0,-80px);
+        @include bg-position(2,0,-100px);
+        @include bg-position(3,0,-120px);
+        @include bg-position(4,0,-140px);
+        @include bg-position(5,0,-160px);
+        @include bg-position(6,0,-180px);
+        @include bg-position(7,0,-200px);
+        @include bg-position(8,0,-220px);
+        @include bg-position(9,0,0);
+        @include bg-position(10,0,-20px);
+        @include bg-position(11,0,-40px);
+        @include bg-position(12,0,-60px);
     }
 }
 
-//特卖
+/*特卖*/
 #main .sale{
     margin-bottom:10px;
     border-top:1px solid $bdcolor;
@@ -310,7 +267,6 @@ body{
     padding: 0 10px 10px 10px;
     box-sizing:border-box;
     background:#fff;
-    @include h2Title;
     h2{
         i{
             background-position: 0 0;
@@ -428,11 +384,10 @@ body{
     }
 }
 
-//热门活动
+/*热门活动*/
 #main .hot{
     background:#fff;
     border-top:1px solid $bdcolor;
-    @include h2Title;
     .con{
         overflow:hidden;
         width: 100%;
@@ -458,7 +413,7 @@ body{
     }
 }
 
-//底部
+/*底部*/
 #footer{
     height: 50px;
     margin-top:10px;
@@ -476,23 +431,8 @@ body{
             margin:5px auto;
             @include bgIcon;
         }
-        &:nth-child(1){
-            i{
-                background-position: -60px -153px
-            }
-        }
-        &:nth-child(2){
-            i{
-                background-position: -60px -173px
-            }
-        }
-        &:nth-child(3){
-            i{
-                background-position: -60px -308px
-            }
-        }
-        span{
-            // display:block;
-        }
+        @include bg-position(1,-60px,-153px);
+        @include bg-position(1,-60px,-173px);
+        @include bg-position(1,-60px,-308px);
     }
 }
