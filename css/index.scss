@@ -432,7 +432,7 @@ body{
             @include bgIcon;
         }
         @include bg-position(1,-60px,-153px);
-        @include bg-position(1,-60px,-173px);
-        @include bg-position(1,-60px,-308px);
+        @include bg-position(2,-60px,-173px);
+        @include bg-position(3,-60px,-308px);
     }
 }
